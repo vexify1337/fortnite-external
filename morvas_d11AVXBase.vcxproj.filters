@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\colorpicker.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\gui.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui_freetype.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui_tricks.cpp" />
+    <ClCompile Include="imgui\framework\ImGui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Threads\game.hpp" />
+    <ClInclude Include="imgui\gui.hpp" />
+    <ClInclude Include="Threads\includes.hpp" />
+    <ClInclude Include="Threads\keyboard\input.hpp" />
+    <ClInclude Include="Threads\sdk\offsets.hpp" />
+    <ClInclude Include="Threads\sdk\sdk.hpp" />
+    <ClInclude Include="settings.hpp" />
+    <ClInclude Include="imgui\Keybinds.h" />
+    <ClInclude Include="imgui\framework\protection\crypt.h" />
+    <ClInclude Include="imgui\framework\protection\xorstr.hpp" />
+    <ClInclude Include="imgui\menu.h" />
+    <ClInclude Include="Kernel\com.h" />
+    <ClInclude Include="Kernel\commincat.h" />
+    <ClInclude Include="Kernel\spoog.h" />
+    <ClInclude Include="Threads\sdk\mathmatics.h" />
+    <ClInclude Include="imgui\framework\ImGui\colorpicker.h" />
+    <ClInclude Include="imgui\framework\ImGui\font.h" />
+    <ClInclude Include="imgui\framework\ImGui\gui.h" />
+    <ClInclude Include="imgui\framework\ImGui\imconfig.h" />
+    <ClInclude Include="imgui\framework\ImGui\imgui.h" />
+    <ClInclude Include="imgui\framework\ImGui\imgui_freetype.h" />
+    <ClInclude Include="imgui\framework\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\framework\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\framework\ImGui\imgui_internal.h" />
+    <ClInclude Include="imgui\framework\ImGui\imgui_tricks.hpp" />
+    <ClInclude Include="imgui\framework\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\framework\ImGui\imstb_textedit.h" />
+    <ClInclude Include="imgui\framework\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Threads\fonts.h" />
+    <ClInclude Include="aitj\entry_auth.h" />
+    <ClInclude Include="aitj\encrypter.h" />
+    <ClInclude Include="aitj\corenet.h" />
+    <ClInclude Include="imgui\cheat_configs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{87384cc5-56e2-45b9-acb8-28511fddebdd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\VISUAL STUDIO STUFF\freetype\win64\cryptopp.lib" />
+    <Library Include="..\VISUAL STUDIO STUFF\freetype\win64\freetype.lib" />
+    <Library Include="..\VISUAL STUDIO STUFF\freetype\win64\libcurl.lib" />
+    <Library Include="aitj\library_x64.lib" />
+  </ItemGroup>
+</Project>
