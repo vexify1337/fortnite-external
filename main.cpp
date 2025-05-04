@@ -18,7 +18,6 @@ namespace SophieGain {
             timer.start();
             auto array = ReadMemory<uintptr_t>(LatestGWorld + UWORLD);
 
-            // Explicitly cast LatestGWorld to UWorld* before comparison
             if ((LatestGWorld) != pointers.uworld) {
                 auto cr3 = PagefaultAPI::FetchDtb();
                 LatestGWorld = ReadMemory<uintptr_t>(virtualaddy + UWORLD);
