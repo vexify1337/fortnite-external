@@ -7,18 +7,9 @@
 #include <vector>
 #include "chrono"
 #include "aitj/corenet.h"
-#include "aitj/entry_auth.h"
+
 #include "aitj/encrypter.h"
 
-using namespace KeyAuth;
-std::string name = Crypt("fortnite slooted").decrypt(); // App name
-std::string ownerid = Crypt("gWrAx325nE").decrypt(); // Account ID
-std::string secret = Crypt("a11071f0d6342aa89383f6956170bbc24ca6677d4b3917889fb4f3a54738d1c6").decrypt(); // Application secret (not used in latest C++ example)
-std::string version = Crypt("1.0").decrypt(); // Application version. Used for automatic downloads see video here https://www.youtube.com/watch?v=kW195PLCBKs
-std::string url = Crypt("https://keyauth.win/api/1.3/").decrypt(); // change if using KeyAuth custom domains feature
-std::string path = ""; // (OPTIONAL) see tutorial here https://www.youtube.com/watch?v=I9rxt821gMk&t=1s
-
-api KeyAuthApp(name, ownerid, version, url, path);
 namespace SophieGain {
     static auto g_PML4Thread() -> void {
         auto LatestGWorld = ReadMemory<uintptr_t>(virtualaddy + UWORLD);
@@ -131,62 +122,6 @@ void entry_point() {
 
 
 
-
-// [[ Note -> Make sure to remove the boolean checking on release, not good practise to keep it here! ]] 
 void main() {
-    if (SophieRain::debug_app) {
-        entry_point();
-    }
-
-    else {
-        SetConsoleTitleA(Crypt("Flare Slotted < developer: morva999"));
-        KeyAuthApp.init();
-        if (!KeyAuthApp.response.success)
-        {
-            ConsoleUtils::Write(KeyAuthApp.response.message);
-            Sleep(2000);
-            exit(0);
-        }
-        system("cls");
-        ConsoleUtils::WriteLine("Locating server communication..");
-        Sleep(2000);
-        system("cls");
-        Sleep(1500);
-        ConsoleUtils::WriteLine("Success.");
-        Sleep(1000);
-        ConsoleUtils::WriteLine("Now loading preauthentication, please wait.");
-        Sleep(2000);
-        std::string key;
-        ConsoleUtils::Write("Enter your key -> ");
-        std::cin >> key;
-        KeyAuthApp.license(key);
-
-        if (!KeyAuthApp.response.success)
-        {
-            ConsoleUtils::Write(KeyAuthApp.response.message);
-            Sleep(2000);
-            exit(0);
-        }
-        ConsoleUtils::WriteLine("Welcome.");
-        Sleep(2000);
-        ConsoleUtils::WriteLine("Now loading.");
-        Sleep(2000);
-        system("cls");
-        Sleep(5000);
-        system("cls");
-        ConsoleUtils::WriteLine("Connecting to overlay.");
-        Sleep(1500);
-        system("cls");
-        ConsoleUtils::WriteLine("Connecting to process.");
-        Sleep(1500);
-        system("cls");
-        entry_point();
-    }
-
-   
+    entry_point();
 }
-
-
-
-
-
